@@ -20,7 +20,7 @@
                         <div class="card-header msg_head">
                             <div class="d-flex bd-highlight">
                                 <div class="img_cont">
-                                    <img src="https://cdn-icons-png.flaticon.com/512/387/387569.png" class="rounded-circle user_img">
+                                    <img src="https://img.icons8.com/color/96/000000/pdf.png" class="rounded-circle user_img">
                                     <span class="online_icon"></span>
                                 </div>
                                 <div class="user_info">
@@ -101,7 +101,7 @@
                             const minute = date.getMinutes();
                             const str_time = hour + ":" + minute;
                             
-                            var botHtml = '<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="https://cdn-icons-png.flaticon.com/512/387/387569.png" class="rounded-circle user_img_msg"></div><div class="msg_cotainer">Your PDFs have been processed. You can now ask questions about their content.<span class="msg_time">' + str_time + '</span></div></div>';
+                            var botHtml = '<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="https://img.icons8.com/color/96/000000/pdf.png" class="rounded-circle user_img_msg"></div><div class="msg_cotainer">Your PDFs have been processed. You can now ask questions about their content.<span class="msg_time">' + str_time + '</span></div></div>';
                             $("#messageFormeight").append($.parseHTML(botHtml));
                         },
                         error: function(xhr) {
@@ -126,7 +126,7 @@
                     
                     // Add loading indicator
                     var loadingId = "loading-" + Date.now();
-                    var loadingHtml = '<div id="' + loadingId + '" class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="https://cdn-icons-png.flaticon.com/512/387/387569.png" class="rounded-circle user_img_msg"></div><div class="msg_cotainer">Thinking...<span class="msg_time">' + str_time + '</span></div></div>';
+                    var loadingHtml = '<div id="' + loadingId + '" class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="https://img.icons8.com/color/96/000000/pdf.png" class="rounded-circle user_img_msg"></div><div class="msg_cotainer">Thinking...<span class="msg_time">' + str_time + '</span></div></div>';
                     $("#messageFormeight").append($.parseHTML(loadingHtml));
                     
                     $.ajax({
@@ -140,7 +140,7 @@
                         // Remove loading indicator
                         $("#" + loadingId).remove();
                         
-                        var botHtml = '<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="https://cdn-icons-png.flaticon.com/512/387/387569.png" class="rounded-circle user_img_msg"></div><div class="msg_cotainer">' + data + '<span class="msg_time">' + str_time + '</span></div></div>';
+                        var botHtml = '<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="https://img.icons8.com/color/96/000000/pdf.png" class="rounded-circle user_img_msg"></div><div class="msg_cotainer">' + data + '<span class="msg_time">' + str_time + '</span></div></div>';
                         $("#messageFormeight").append($.parseHTML(botHtml));
                         
                         // Scroll to bottom of chat
@@ -150,7 +150,7 @@
                         $("#" + loadingId).remove();
                         
                         var errorMessage = xhr.responseText || "An error occurred. Please try again.";
-                        var botHtml = '<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="https://cdn-icons-png.flaticon.com/512/387/387569.png" class="rounded-circle user_img_msg"></div><div class="msg_cotainer">' + errorMessage + '<span class="msg_time">' + str_time + '</span></div></div>';
+                        var botHtml = '<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="https://img.icons8.com/color/96/000000/pdf.png" class="rounded-circle user_img_msg"></div><div class="msg_cotainer">' + errorMessage + '<span class="msg_time">' + str_time + '</span></div></div>';
                         $("#messageFormeight").append($.parseHTML(botHtml));
                     });
                     

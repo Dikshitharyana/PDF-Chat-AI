@@ -67,12 +67,6 @@ def upload_files():
     
     # Process uploaded PDFs
     session_id = str(uuid.uuid4())
-    # try:
-    #     # Load and process PDFs
-    #     process_uploaded_pdfs(uploaded_files, session_id)
-    #     return jsonify({'success': True, 'session_id': session_id}), 200
-    # except Exception as e:
-    #     return jsonify({'error': str(e)}), 500
     try:
         process_uploaded_pdfs(uploaded_files, session_id)
         # Delete files after processing
